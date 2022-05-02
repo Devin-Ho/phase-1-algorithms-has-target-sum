@@ -1,5 +1,16 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    //look through each item on the array
+    for (let j = i + 1; j < array.length; j++) {
+      //looks through rest of the array
+      if (array[i] + array[j] === target) {
+        //checks if the first num1 + num2 === target
+        return true
+      }
+    }
+  }
+  return false 
 }
 
 /* 
@@ -8,6 +19,14 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  Compare (add) the first number of the array to the rest of the numbers
+  and see if it equals to the target value 
+
+  If(numbers in array === target) {
+    return true 
+  } else {
+    return false 
+  }
 */
 
 /*
